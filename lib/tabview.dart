@@ -2,6 +2,8 @@ import 'package:companyprofile/company_details.dart';
 import 'package:companyprofile/company_location.dart';
 import 'package:flutter/material.dart';
 
+import 'contact_person.dart';
+
 class TestTab extends StatelessWidget {
   const TestTab({Key? key}) : super(key: key);
 
@@ -26,7 +28,7 @@ class TestTab extends StatelessWidget {
           children: [
             CompanyDetails(),
             CompanyLocation(),
-             //ContactPerson(),
+            ContactPerson(),
             
           ],
         ),
