@@ -1,5 +1,5 @@
-import 'package:companyprofile/user_details.dart';
-import 'package:companyprofile/user_location.dart';
+import 'package:companyprofile/company_details.dart';
+import 'package:companyprofile/company_location.dart';
 import 'package:flutter/material.dart';
 
 class TestTab extends StatelessWidget {
@@ -8,26 +8,26 @@ class TestTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           
           bottom: TabBar(
             tabs: [
-              Tab(icon: Text('General Details')),
-              Tab(icon: Text('Location')),
+              Tab(icon: Text('Company Details')),
+              Tab(icon: Text('Company Location')),
+              Tab(icon: Text('Contact Person')),
             ],
           ),
-          title: Text('Company Details'),
+          title: Text('Company Profile'),
         ),
         body: TabBarView(
         
           children: [
-             UserDetails(),
-             UserLocation(),
+            CompanyDetails(),
+            CompanyLocation(),
+             //ContactPerson(),
             
-            // Text('General Details'),
-            // Text('Location'),
           ],
         ),
       ),

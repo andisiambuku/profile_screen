@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class UserLocation extends StatelessWidget {
+class CompanyLocation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return Scaffold(
        resizeToAvoidBottomInset : true,
      body: SingleChildScrollView(
-      child:  Container(
+       child:  Container(
       padding: EdgeInsets.all(20.0),
       child: Column(
         children: [
@@ -40,7 +40,8 @@ class UserLocation extends StatelessWidget {
           onPressed: () {},
         ),
       ]),
-      ))
+      )
+      )
     );
   }
 }
