@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'image_selector.dart';
+
 class CompanyDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,11 +13,19 @@ class CompanyDetails extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               child: Column(
                 children: [
-            CircleAvatar(
-             radius: 70.0,
-             backgroundColor: Color(0xff1dbf73),
-             backgroundImage: AssetImage('assets/images/avatar_image.png'),
-             ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ImageSelector()),
+                );
+              },
+               child: CircleAvatar(
+               radius: 70.0,
+               backgroundColor: Color(0xff1dbf73),
+               backgroundImage: AssetImage('assets/images/avatar_image.png'),
+               ),
+            ),
                     SizedBox(height: 5),
                     TextField(
                       keyboardType: TextInputType.text,
